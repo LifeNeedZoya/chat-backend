@@ -1,6 +1,6 @@
 fastapi==0.115.13
 SQLAlchemy==2.0.41
-psycopg2-binary==2.9.9
+psycopg[binary]==3.2.1
 PyJWT==2.10.1
 python-decouple==3.8
 bcrypt==4.3.0
