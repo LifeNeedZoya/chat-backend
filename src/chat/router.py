@@ -173,6 +173,7 @@ def get_session_info(
 @router.get("/", response_model=list[ChatSessionResponse])
 def get_chat_sessions(current_user: dict = Depends(get_current_user), db: Session = Depends(get_db)):
     user_id = current_user.get("user_id")
+    user_id = int(user_id)
     chat_sessions = db.query(ChatSessions).filter(ChatSessions.user_id == user_id).all()
     
     response = []
